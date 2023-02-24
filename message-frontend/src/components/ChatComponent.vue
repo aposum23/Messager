@@ -1,135 +1,17 @@
 <template>
   <div class="messages-window">
     <div class="messages">
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-to">
-        <p>Example of message</p>
-      </div>
-      <br/>
-      <br/>
-      <div class="message-from">
-        <p>Example of message</p>
+      <div v-for="i in 20">
+        <br/>
+        <br/>
+        <div class="message-to">
+          <p>Example of message</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="message-from">
+          <p>Example of message</p>
+        </div>
       </div>
       <div class="wrap"></div>
       <div class="input-message">
@@ -144,11 +26,29 @@
 <script>
 export default {
   name: 'ChatComponent',
+  props: {
+    chat_id: Number,
+  },
   data() {
     return{
       current_user: {},
     }
-  }
+  },
+  methods:{
+    scrollChatDown(){
+      let div = document.getElementsByClassName('messages')[0];
+      div.scrollTo(0, 2000);
+      console.log('suck');
+    }
+  },
+  mounted:
+    function () {
+      this.scrollChatDown();
+    },
+  beforeUpdate: 
+    function () {
+      this.scrollChatDown();
+    },
 }
 </script>
 
@@ -183,7 +83,6 @@ export default {
     display:inline-block;
     width: 100%;
     height:95vh;
-    background-color: #19313E;
     overflow-y: scroll;
   }
 

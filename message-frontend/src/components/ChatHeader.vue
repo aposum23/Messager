@@ -1,5 +1,5 @@
 <template>
-  <div class="user-card">
+  <div class="user-card" @click="openAbout()">
     <img class="user-image" src=""/>
     <div class="user-text">
       <p>User name</p>
@@ -14,6 +14,12 @@ export default {
   data() {
     return{
       current_user: {},
+      user_id: 1,
+    }
+  },
+  methods:{
+    openAbout(){
+      this.$emit('open-about', this.user_id);
     }
   }
 }

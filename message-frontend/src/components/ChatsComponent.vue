@@ -1,19 +1,6 @@
 <template>
   <div class="chats">
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
-    <UserCardChatsComponent class="card"/>
+    <UserCardChatsComponent v-for="i in 13" class="card" @click="openChat(i)"/>
   </div>
 </template>
 
@@ -28,6 +15,11 @@ export default {
   data(){
     return {
       user: [],
+    }
+  },
+  methods:{
+    openChat(chat_id){
+      this.$emit('open-chat', chat_id);
     }
   }
 }
