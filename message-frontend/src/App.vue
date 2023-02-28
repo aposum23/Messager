@@ -1,6 +1,9 @@
 <template>
   <div class="page">
-    <ChatsComponent @open-chat="openChat"/>
+    <div class="chats">
+      <ChatsHeader/>
+      <ChatsComponent @open-chat="openChat"/>
+    </div>
     <div class="chat">
       <ChatHeader @current_user="current_user" v-if="!show_empty_chat" @open-about="openAbout"/>
       <ChatComponent @chat_id="user_chat_id" v-if="!show_empty_chat"/>
@@ -15,7 +18,8 @@ import ChatsComponent from './components/ChatsComponent.vue';
 import ChatHeader from './components/ChatHeader.vue';
 import ChatComponent from './components/ChatComponent.vue';
 import EmptyChatComponent from './components/EmptyChatComponent.vue';
-import AboutUserComponent from './components/AboutUserComponent.vue'
+import AboutUserComponent from './components/AboutUserComponent.vue';
+import ChatsHeader from './components/ChatsHeader.vue';
 
 export default {
   name: 'App',
@@ -25,6 +29,7 @@ export default {
     ChatComponent,
     EmptyChatComponent,
     AboutUserComponent,
+    ChatsHeader,
   },
   data(){
     return{
@@ -83,5 +88,9 @@ body {
   position:fixed;
   left: 50%;
   top:20%;
+}
+
+.chats {
+  display: block;
 }
 </style>

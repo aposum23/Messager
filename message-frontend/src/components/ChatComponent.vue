@@ -104,13 +104,14 @@ export default {
     display: inline-flex;
     position:fixed;
     bottom: 2rem;
-    left: 44%;
+    width: 30%;
+    left: 58%;
     .message-input {
       background-color: #0F2632;
       border: 1px solid #0A1D27;
       border-radius: 15px;
-      width: 30rem;
-      height: 2rem;
+      width: 80%;
+      height: 1.5rem;
       padding: .5rem;
       margin: auto;
       color: #fff;
