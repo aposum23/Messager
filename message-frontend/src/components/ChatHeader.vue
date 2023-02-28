@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'UserCardChatsComponent',
+  name: 'ChatHeader',
   data() {
     return{
       current_user: {},
@@ -33,6 +33,7 @@ export default {
     display: inline-flex;
     background-color: #0F2632;
     border: 1px solid #0A1D27;
+    border-left: none;
 
     & img {
       width: 50px;

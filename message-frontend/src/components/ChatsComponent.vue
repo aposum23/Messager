@@ -10,7 +10,7 @@ import UserCardChatsComponent from './UserCardChatsComponent.vue';
 export default {
   name: 'ChatsComponent',
   components: {
-    UserCardChatsComponent
+    UserCardChatsComponent,
   },
   data(){
     return {
