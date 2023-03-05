@@ -49,7 +49,7 @@ export default {
   }
 
   .about-user::-webkit-scrollbar {
-    background-color: #19313E;
+    background-color: #0F2632;
     width: 10px;
     border-radius: 0px 15px 15px 0px;
   }

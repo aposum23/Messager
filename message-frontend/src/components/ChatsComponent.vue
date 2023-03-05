@@ -34,7 +34,7 @@ export default {
     height:100vh;
   }
   .chats::-webkit-scrollbar {
-    background-color: #19313E;
+    background-color: #0F2632;
     width: 10px;
   }
 
