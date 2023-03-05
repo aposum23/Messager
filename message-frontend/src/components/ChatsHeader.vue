@@ -18,7 +18,7 @@ export default {
   },
   methods:{
     openCloseRegCard(){
-      this.$emit('openCloseRegCard');
+      this.$emit('open-close-reg-card');
     }
   }
 }
