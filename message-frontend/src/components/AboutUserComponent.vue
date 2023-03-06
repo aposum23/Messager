@@ -1,7 +1,7 @@
 <template>
   <div class="about-user">
     <div class="user-main">
-      <img src=""/>
+      <img src="@/assets/user_image.svg"/>
       <div class="user-main--name">
         <p class="user-name">User name</p>
         <P class="user-nick">@user_nick</P>

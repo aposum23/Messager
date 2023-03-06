@@ -1,6 +1,6 @@
 <template>
   <div class="user-card" @click="openAbout()">
-    <img class="user-image" src=""/>
+    <img class="user-image" src="@/assets/user_image.svg"/>
     <div class="user-text">
       <p>User name</p>
       <p class="status-online">online</p>

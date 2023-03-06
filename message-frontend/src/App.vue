@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <div class="chats">
-      <ChatsHeader @openCloseRegCard="openUserRegistration"/>
-      <ChatsComponent @open-chat="openChat" />
+      <ChatsHeader @open-close-reg-card="openUserRegistration"/>
+      <ChatsComponent @open-chat="openChat" :show_chats="user_is_auth"/>
     </div>
     <div class="chat">
       <ChatHeader @current_user="current_user" v-if="!show_empty_chat" @open-about="openAbout" />
@@ -37,6 +37,7 @@ export default {
   data() {
     return {
       current_user: [],
+      user_is_auth: false,
       show_empty_chat: true,
       user_chat_id: null,
       show_about: false,
@@ -67,7 +68,19 @@ export default {
     openUserRegistration(){
       this.show_reg_auth = !this.show_reg_auth;
     }
-  }
+  },
+  mounted:
+    function(){
+      let auth_key = window.localStorage.getItem('auth-key');
+
+      console.log(auth_key);
+      if (auth_key){
+        this.user_is_auth = true;
+      }
+      else {
+        this.show_reg_auth = true;
+      }
+    }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="user-card">
-    <img class="user-image" src="user_image"/>
+    <img class="user-image" src="@/assets/user_image.svg"/>
     <div class="user-text">
       <p>User Name</p>
       <p class="last-msg">This is last message</p>

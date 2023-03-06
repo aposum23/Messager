@@ -15,9 +15,9 @@
       </div>
       <div class="wrap"></div>
       <div class="input-message">
-        <input type="button" class="add-file"/>
+        <button class="add-file"><img src="@/assets/attach.svg"/></button>
         <input type="text" class="message-input"/>
-        <input type="button" class="send-message"/>
+        <button class="send-message"><img src="@/assets/send.svg"/></button>
       </div>
     </div>
   </div>
@@ -126,6 +126,11 @@ export default {
       width: 3rem;
       height: 3rem;
       margin-left: 1rem;
+      
+      & img {
+        width: 2rem;
+        margin: auto;
+      }
     }
 
     .send-message:active {
@@ -140,6 +145,11 @@ export default {
       width: 3rem;
       height: 3rem;
       margin-right: 1rem;
+
+      & img {
+        width: 2rem;
+        margin: auto;
+      }
     }
 
     .add-file:active {

@@ -1,6 +1,6 @@
 <template>
   <div class="chats">
-    <UserCardChatsComponent v-for="i in 13" class="card" @click="openChat(i)"/>
+    <UserCardChatsComponent v-for="i in 13" class="card" @click="openChat(i)" v-if="show_chats"/>
   </div>
 </template>
 
@@ -11,6 +11,9 @@ export default {
   name: 'ChatsComponent',
   components: {
     UserCardChatsComponent,
+  },
+  props:{
+    show_chats: Boolean,
   },
   data(){
     return {
@@ -30,6 +33,7 @@ export default {
   .chats {
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: #0F2632;
     width: 40rem;
     height:100vh;
   }

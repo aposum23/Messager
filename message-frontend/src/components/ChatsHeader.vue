@@ -1,6 +1,6 @@
 <template>
   <div class="find">
-    <img class="user-image" src="" @click="openCloseRegCard"/>
+    <img class="user-image" src="@/assets/user_image.svg" @click="openCloseRegCard"/>
     <div class="find-div">
       <img src="@/assets/search.svg"/>
       <input type="text">
@@ -18,7 +18,7 @@ export default {
   },
   methods:{
     openCloseRegCard(){
-      this.$emit('openCloseRegCard');
+      this.$emit('open-close-reg-card');
     }
   }
 }
