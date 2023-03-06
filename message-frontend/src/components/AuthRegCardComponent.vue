@@ -6,9 +6,12 @@
     <input type="text" v-if="registration" v-model="last_name" class="form" />
     <input type="text" v-if="registration" v-model="email" class="form" />
     <input type="text" v-if="registration" v-model="phone_number" class="form" />
+    <input type="text" v-if="registration" v-model="nick_name" class="form" />
     <input type="text" v-model="login" class="form" />
     <input type="text" v-model="password" class="form" />
     <input type="text" v-if="registration" v-model="password_rep" class="form" />
+    <label v-show="registration" for="image-input">Profile image:</label>
+    <input type="file" v-if="registration" class="form" id="image-input" />
     <input type="button" value="Sign in" v-if="!registration" class="form" />
     <input type="button" value="Sign up" v-if="registration" class="form" />
   </div>
@@ -24,6 +27,7 @@ export default {
       last_name: 'Last name',
       email: 'Email',
       phone_number: 'Phone number',
+      nick_name: 'Nick name',
       login: 'Login',
       password: 'Password',
       password_rep: 'Repeat password',
